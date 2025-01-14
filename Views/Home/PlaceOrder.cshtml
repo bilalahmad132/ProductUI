@@ -1,0 +1,26 @@
+﻿@model WebProductProject.Models.ItemDto
+
+<h2>Place Order for @Model.Name</h2>
+
+<!-- You can now display the item details -->
+<p>Product: @Model.Name</p>
+<p>Description: @Model.Desc</p>
+<p>Price: @Model.Price</p>
+
+<!-- Form to submit the order -->
+<form method="post" action="@Url.Action("SubmitOrder", "Home")">
+    <input type="hidden" name="itemId" value="@Model.ItemId" />
+    <input type="hidden" name="productPrice" value="@Model.Price" />
+
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username" required />
+    </div>
+
+    <div>
+        <label for="quantity">Quantity:</label>
+        <input type="number" name="quantity" id="quantity" min="1" required />
+    </div>
+
+    <button type="submit">Submit Order</button>
+</form>
