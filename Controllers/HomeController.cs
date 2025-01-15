@@ -119,12 +119,10 @@ namespace WebProductProject.Controllers
                     return RedirectToAction("Error", "Home");
                 }
 
-                var response = await httpClient.PostAsync("https://localhost:7065/api/items/order", content);
+                var response = await httpClient.PostAsync("https://localhost:7094/api/items/order", content);
 
                 if (response.IsSuccessStatusCode)
                 {
-
-
                     return View("OrderConfirmation");
                 }
                 else
@@ -162,7 +160,7 @@ namespace WebProductProject.Controllers
                 }
 
                 // Call the API to get all orders
-                var response = await httpClient.GetAsync("https://localhost:7065/api/items/orders");
+                var response = await httpClient.GetAsync("https://localhost:7094/api/items/orders");
 
                 if (response.IsSuccessStatusCode)
                 {

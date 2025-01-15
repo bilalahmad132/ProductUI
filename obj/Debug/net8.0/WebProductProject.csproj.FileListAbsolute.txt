@@ -518,3 +518,8 @@ C:\Users\User\source\repos\ProductWeb\WebProductProject\WebProductProject\obj\De
 C:\Users\User\source\repos\ProductWeb\WebProductProject\WebProductProject\obj\Debug\net8.0\WebProductProject.pdb
 C:\Users\User\source\repos\ProductWeb\WebProductProject\WebProductProject\obj\Debug\net8.0\WebProductProject.genruntimeconfig.cache
 C:\Users\User\source\repos\ProductWeb\WebProductProject\WebProductProject\obj\Debug\net8.0\ref\WebProductProject.dll
+C:\Users\User\source\repos\ProductWeb\WebProductProject\WebProductProject\obj\Debug\net8.0\WebProductProject.sourcelink.json
+C:\Users\User\source\repos\ProductWeb\WebProductProject\WebProductProject\bin\Debug\net8.0\WebProductProject.staticwebassets.endpoints.json
+C:\Users\User\source\repos\ProductWeb\WebProductProject\WebProductProject\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+C:\Users\User\source\repos\ProductWeb\WebProductProject\WebProductProject\obj\Debug\net8.0\staticwebassets\msbuild.WebProductProject.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\User\source\repos\ProductWeb\WebProductProject\WebProductProject\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

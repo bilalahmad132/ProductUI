@@ -2,7 +2,7 @@
   "Files": [
     {
       "Id": "C:\\Users\\User\\source\\repos\\ProductWeb\\WebProductProject\\WebProductProject\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\WebProductProject.bundle.scp.css",
-      "PackagePath": "staticwebassets\\WebProductProject.bundle.scp.css"
+      "PackagePath": "staticwebassets\\WebProductProject.tqi3j6t55s.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\User\\source\\repos\\ProductWeb\\WebProductProject\\WebProductProject\\wwwroot\\css\\site.css",
@@ -243,6 +243,10 @@
     {
       "Id": "C:\\Users\\User\\source\\repos\\ProductWeb\\WebProductProject\\WebProductProject\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebProductProject.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebProductProject.Microsoft.AspNetCore.StaticWebAssets.props",

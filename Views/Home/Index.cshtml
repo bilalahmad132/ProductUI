@@ -6,14 +6,19 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJ6vFf7PflmYp9SCO0mxm3tU8GoYvJ1jUFE7Q9je6xzMwVqVqFdmEL4Di6+H" crossorigin="anonymous">
     <style>
         /* Custom styles for your page */
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Arial', sans-serif;
+        }
+
         .modal-content {
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
 
         .btn-primary {
-            background-color: #0069d9;
-            border-color: #0062cc;
+            background-color: #007bff;
+            border-color: #007bff;
         }
 
             .btn-primary:hover {
@@ -41,7 +46,7 @@
         }
 
         .modal-header {
-            background-color: #f8f9fa;
+            background-color: #f1f1f1;
             border-bottom: 1px solid #dee2e6;
         }
 
@@ -56,6 +61,7 @@
         h1 {
             font-size: 2.5rem;
             color: #495057;
+            font-weight: 600;
         }
 
         .role-section {
@@ -91,6 +97,35 @@
                 background-color: #e0a800;
                 border-color: #d39e00;
             }
+
+        .modal-dialog {
+            max-width: 600px;
+        }
+
+        /* Enhance card-like appearance for the table */
+        .table-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+        }
+
+            .table-container h2 {
+                font-size: 1.8rem;
+                margin-bottom: 15px;
+            }
+
+
+        .modal-body {
+            padding: 1rem;
+        }
+
+        .table {
+            font-size: 0.9rem;
+        }
+
+        }
     </style>
 </head>
 
@@ -108,22 +143,27 @@
     </div>
 
     <!-- Show Create Button only for Admin Role -->
-    <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#createProductModal" id="createProductBtn" style="display:none;">Create New Product</button>
-    <button id="getAllOrdersBtn" class="btn btn-info mb-3" style="display:none;">Get All Orders</button>
+    <div class="text-center">
+        <button class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#createProductModal" id="createProductBtn" style="display:none;">Create New Product</button>
+        <button id="getAllOrdersBtn" class="btn btn-info mb-3" style="display:none;">Get All Orders</button>
+    </div>
 
-    <table id="productsTable" class="table table-striped table-bordered table-hover">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>Price</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
+    <div class="table-container">
+        <h2 class="text-center">Product List</h2>
+        <table id="productsTable" class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
 </div>
 
 <!-- Create Product Modal -->
@@ -189,7 +229,7 @@
 
         if (productName && productDesc && productPrice && token) {
             // If productToEdit is not null, we are editing an existing product
-            const apiUrl = productToEdit ? `https://localhost:7065/api/items/update/${productToEdit}` : 'https://localhost:7065/api/items/create';
+            const apiUrl = productToEdit ? `https://localhost:7094/api/items/update/${productToEdit}` : 'https://localhost:7094/api/items/create';
             const method = productToEdit ? 'PUT' : 'POST'; // Use PUT for updating, POST for creating
 
             fetch(apiUrl, {
@@ -323,15 +363,10 @@
         window.location.href = placeOrderUrl;
     }
 
-
-
-
-
-
     function fetchProducts() {
         const token = getBearerToken();
         if (token) {
-            fetch('https://localhost:7065/api/items/get', {
+            fetch('https://localhost:7094/api/items/get', {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -376,7 +411,7 @@
     function deleteProduct(productId) {
         const token = getBearerToken();
         if (token) {
-            fetch(`https://localhost:7065/api/items/delete/${productId}`, {
+            fetch(`https://localhost:7094/api/items/delete/${productId}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`,

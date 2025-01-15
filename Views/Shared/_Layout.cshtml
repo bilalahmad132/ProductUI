@@ -13,7 +13,7 @@
         }
 
         .auth-container {
-            max-width: 400px;
+           
             margin: 50px auto;
             padding: 30px;
             background: #fff;
@@ -67,7 +67,6 @@
     <div class="container">
         <div class="auth-container">
             <div class="auth-header">
-                <h2>@ViewData["Title"]</h2>
                 <p>@ViewData["Description"]</p>
             </div>
             <main role="main">
@@ -88,7 +87,7 @@
         document.getElementById('logoutLink')?.addEventListener('click', async (event) => {
             event.preventDefault();
             try {
-                const response = await fetch('https://localhost:7065/api/user/logout', {
+                const response = await fetch('https://localhost:7094/api/user/logout', {
                     method: 'POST',
                     credentials: 'include', 
                 });
