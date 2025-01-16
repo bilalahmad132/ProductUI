@@ -362,3 +362,6 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /bin/Debug/net8.0/WebProductProject.dll
+/bin/Debug/net8.0/WebProductProject.exe
+/bin/Debug/net8.0/WebProductProject.pdb
+/bin/Debug/net8.0/WebProductProject.staticwebassets.endpoints.json
