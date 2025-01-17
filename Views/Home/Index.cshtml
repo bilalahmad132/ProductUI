@@ -195,7 +195,8 @@
         </div>
     </div>
 </div>
-@* send email form *@
+
+    <!--send email form-->  
 <div class="modal fade" id="sendEmailModal" tabindex="-1" aria-labelledby="sendEmailModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -219,7 +220,7 @@
                     </div>
                     <button type="submit" class="btn btn-primary">Send Email</button>
                 </form>
-            </div>
+            </div>yt
         </div>
     </div>
 </div>
@@ -234,7 +235,7 @@
         const name = 'token=';
         const decodedCookie = decodeURIComponent(document.cookie);
         const ca = decodedCookie.split(';');
-
+        
         for (let i = 0; i < ca.length; i++) {
             let c = ca[i];
             while (c.charAt(0) === ' ') {
